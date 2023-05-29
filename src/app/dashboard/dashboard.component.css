@@ -1,0 +1,14 @@
+.dashboard-container {
+  padding: 24px;
+  background-image: url("../../assets/bground.png");
+  background-size: cover;
+  background-position: center;
+  color: #172148;
+}
+
+.card {
+  background-color: #ffffff;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.24);
+}
