@@ -1,12 +1,75 @@
 <div class="dashboard-container">
-  <h2>Welcome to the Dashboard</h2>
-  <!-- Add your dashboard content here -->
-  <div class="card">
-    <h3>Chart</h3>
-    <!-- Add your chart component here -->
+  <div class="sidebar">
+    <div class="user-details">
+      <div class="avatar">
+        <span>{{ user?.fullname.charAt(0) }}</span>
+      </div>
+      <div class="user-info">
+        <h3>{{ user?.fullname }}</h3>
+        <p>{{ user?.username }}</p>
+      </div>
+    </div>
   </div>
-  <div class="card">
-    <h3>Data Table</h3>
-    <!-- Add your data table component here -->
+
+  <div class="main-content">
+    <div class="graph-pair">
+      <div class="weekly-market-comparison">
+        <h4>Weekly Market Comparison</h4>
+        <div class="chart">
+          <canvas
+            baseChart
+            [datasets]="weeklyMarketComparisonData"
+            [labels]="weeklyMarketComparisonLabels"
+            [options]="weeklyMarketComparisonOptions"
+            [legend]="weeklyMarketComparisonLegend"
+            [type]="weeklyMarketComparisonType"
+          ></canvas>
+        </div>
+      </div>
+
+      <div class="monthly-market-comparison">
+        <h4>Monthly Market Comparison</h4>
+        <div class="chart">
+          <canvas
+            baseChart
+            [datasets]="monthlyMarketComparisonData"
+            [labels]="monthlyMarketComparisonLabels"
+            [options]="monthlyMarketComparisonOptions"
+            [legend]="monthlyMarketComparisonLegend"
+            [type]="monthlyMarketComparisonType"
+          ></canvas>
+        </div>
+      </div>
+    </div>
+
+    <div class="graph-pair">
+      <div class="weekly-user-activity">
+        <h4>Weekly User Activity</h4>
+        <div class="chart">
+          <canvas
+            baseChart
+            [datasets]="weeklyUserActivityData"
+            [labels]="weeklyUserActivityLabels"
+            [options]="weeklyUserActivityOptions"
+            [legend]="weeklyUserActivityLegend"
+            [type]="weeklyUserActivityType"
+          ></canvas>
+        </div>
+      </div>
+
+      <div class="monthly-user-activity">
+        <h4>Monthly User Activity</h4>
+        <div class="chart">
+          <canvas
+            baseChart
+            [datasets]="monthlyUserActivityData"
+            [labels]="monthlyUserActivityLabels"
+            [options]="monthlyUserActivityOptions"
+            [legend]="monthlyUserActivityLegend"
+            [type]="monthlyUserActivityType"
+          ></canvas>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

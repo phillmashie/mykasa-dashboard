@@ -10,19 +10,32 @@ export class UserService {
 
   constructor(private http: HttpClient) {}
 
-  loginUser(username: string, password: string): Observable<any> {
-    const url = `${this.baseUrl}/login`;
-    const body = { username, password };
-    return this.http.post(url, body);
+  getUserByUsername(username: string): Observable<any> {
+    const url = `${this.baseUrl}/users?username=${username}`;
+    return this.http.get(url);
   }
-
   registerUser(user: any): Observable<any> {
-    const url = `${this.baseUrl}/register`;
+    const url = `${this.baseUrl}/users`;
     return this.http.post(url, user);
   }
 
-  getUserByUsername(username: string): Observable<any> {
-    const url = `${this.baseUrl}/users/${username}`;
-    return this.http.get(url);
+  getUser() {
+    return this.http.get(`${this.baseUrl}/user`);
+  }
+
+  getWeeklyMarketComparison() {
+    return this.http.get(`${this.baseUrl}/weekly-market-comparison`);
+  }
+
+  getMonthlyMarketComparison() {
+    return this.http.get(`${this.baseUrl}/monthly-market-comparison`);
+  }
+
+  getWeeklyUserActivity() {
+    return this.http.get(`${this.baseUrl}/weekly-user-activity`);
+  }
+
+  getMonthlyUserActivity() {
+    return this.http.get(`${this.baseUrl}/monthly-user-activity`);
   }
 }
