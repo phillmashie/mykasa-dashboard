@@ -1,0 +1,10 @@
+/* marketing-filter.component.css */
+
+.marketing-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* Apply more custom styles as needed */

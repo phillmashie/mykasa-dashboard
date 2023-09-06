@@ -1,0 +1,21 @@
+<div class="marketing-container">
+  <h4 class="chart-title">Marketing Data</h4>
+  <div *ngIf="filteredMarketingData.length > 0; else noData">
+    <mat-table [dataSource]="filteredMarketingData">
+      <!-- Define columns for MSISDN, Recharge Date, Recharges, and Marketing Type -->
+      <ng-container matColumnDef="msisdn">
+        <mat-header-cell *matHeaderCellDef> MSISDN </mat-header-cell>
+        <mat-cell *matCellDef="let record"> {{ record.msisdn }} </mat-cell>
+      </ng-container>
+
+      <!-- Add more matColumnDef for other fields -->
+
+      <!-- Define columns array -->
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+    </mat-table>
+  </div>
+  <ng-template #noData>
+    <p>No data available for the selected filters.</p>
+  </ng-template>
+</div>

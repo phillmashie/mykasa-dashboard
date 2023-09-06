@@ -1,0 +1,53 @@
+<div class="marketing-filters">
+  <mat-form-field appearance="fill">
+    <mat-label>Start Date</mat-label>
+    <input
+      matInput
+      [matDatepicker]="startDatePicker"
+      [(ngModel)]="startDate"
+      id="startDate"
+    />
+    <mat-datepicker-toggle
+      matSuffix
+      [for]="startDatePicker"
+    ></mat-datepicker-toggle>
+    <mat-datepicker #startDatePicker></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>End Date</mat-label>
+    <input
+      matInput
+      [matDatepicker]="endDatePicker"
+      [(ngModel)]="endDate"
+      id="endDate"
+    />
+    <mat-datepicker-toggle
+      matSuffix
+      [for]="endDatePicker"
+    ></mat-datepicker-toggle>
+    <mat-datepicker #endDatePicker></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Min Recharge</mat-label>
+    <input matInput type="number" [(ngModel)]="minRecharge" id="minRecharge" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Max Recharge</mat-label>
+    <input matInput type="number" [(ngModel)]="maxRecharge" id="maxRecharge" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Marketing Type</mat-label>
+    <mat-select [(ngModel)]="marketingType" id="marketingType">
+      <mat-option value="sms">SMS</mat-option>
+      <mat-option value="voice">Voice Call</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" (click)="applyFilters()">
+    Apply Filters
+  </button>
+</div>

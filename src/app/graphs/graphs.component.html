@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">
+          Monthly Marketing vs. Monthly Registrations
+        </div>
+        <div class="card-body">
+          <div class="chart-container">
+            <canvas
+              baseChart
+              [datasets]="lineChartData"
+              [labels]="lineChartLabels"
+              [legend]="lineChartLegend"
+              [chartType]="lineChartType"
+              [colors]="lineChartColors"
+              [options]="lineChartOptions"
+            >
+            </canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">Monthly Marketing Efforts</div>
+        <div class="card-body">
+          <div class="chart-container">
+            <canvas
+              baseChart
+              [datasets]="barChartData"
+              [labels]="barChartLabels"
+              [legend]="barChartLegend"
+              [chartType]="barChartType"
+              [colors]="barChartColors"
+              [options]="barChartOptions"
+            >
+            </canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
