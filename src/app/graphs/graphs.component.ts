@@ -71,30 +71,30 @@ export class GraphsComponent implements OnInit {
       (data) => {
         this.lineChartData = [
           {
-            data: data.monthlyMarketingData.map((item) => item.count),
+            data: data.monthlyMarketingData.map((item: { count: any; }) => item.count),
             label: 'SMS Marketing',
           },
           {
-            data: data.monthlyRegisteredData.map((item) => item.count),
+            data: data.monthlyRegisteredData.map((item: { count: any; }) => item.count),
             label: 'Registrations',
           },
         ];
         this.lineChartLabels = data.monthlyMarketingData.map(
-          (item) => item.period
+          (item: { period: any; }) => item.period
         );
 
         this.barChartData = [
           {
-            data: data.monthlyMarketingData.map((item) => item.count),
+            data: data.monthlyMarketingData.map((item: { count: any; }) => item.count),
             label: 'SMS Marketing',
           },
           {
-            data: data.monthlyRegisteredData.map((item) => item.count),
+            data: data.monthlyRegisteredData.map((item: { count: any; }) => item.count),
             label: 'Registrations',
           },
         ];
         this.barChartLabels = data.monthlyMarketingData.map(
-          (item) => item.period
+          (item: { period: any; }) => item.period
         );
       },
       (error) => {

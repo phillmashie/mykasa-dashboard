@@ -17,7 +17,7 @@ export class LoginComponent {
     // Add your login logic here
     // Example: perform authentication, check credentials, etc.
 
-    this.userService.getUserByUsername(this.username).subscribe((user) => {
+    this.userService.getUserByUsername(this.username).subscribe((user: { password: string; role: string; }) => {
       if (user && user.password === this.password && user.role === 'admin') {
         // If login is successful and user has admin role, navigate to the dashboard
         this.router.navigate(['/dashboard']);
