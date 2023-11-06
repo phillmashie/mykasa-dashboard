@@ -1,0 +1,24 @@
+<div>
+  <h2>Add Notification</h2>
+  <form>
+    <div>
+      <label for="notificationText">Notification Text:</label>
+      <input
+        type="text"
+        id="notificationText"
+        name="notificationText"
+        [(ngModel)]="notificationText"
+      />
+    </div>
+    <div>
+      <label for="imageUpload">Upload Image:</label>
+      <input
+        type="file"
+        id="imageUpload"
+        name="imageUpload"
+        (change)="onFileSelected($event)"
+      />
+    </div>
+    <button (click)="addNotification()">Add Notification</button>
+  </form>
+</div>

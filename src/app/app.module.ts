@@ -17,6 +17,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NgChartsModule } from 'ng2-charts';
+import { AddNotificationComponent } from './add-notification/add-notification.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { NgChartsModule } from 'ng2-charts';
     LoginComponent,
     RegisterComponent,
     DashboardComponent,
+    AddNotificationComponent,
   ],
   imports: [
     BrowserModule,
